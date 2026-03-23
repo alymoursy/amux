@@ -11431,7 +11431,7 @@ final class MenuBarExtraController: NSObject, NSMenuDelegate {
     private let clearAllItem = NSMenuItem(title: String(localized: "statusMenu.clearAll", defaultValue: "Clear All"), action: nil, keyEquivalent: "")
     private let checkForUpdatesItem = NSMenuItem(title: String(localized: "menu.checkForUpdates", defaultValue: "Check for Updates…"), action: nil, keyEquivalent: "")
     private let preferencesItem = NSMenuItem(title: String(localized: "menu.preferences", defaultValue: "Preferences…"), action: nil, keyEquivalent: "")
-    private let quitItem = NSMenuItem(title: String(localized: "menu.quitCmux", defaultValue: "Quit cmux"), action: nil, keyEquivalent: "")
+    private let quitItem = NSMenuItem(title: String(localized: "menu.quitCmux", defaultValue: "Quit AMUX"), action: nil, keyEquivalent: "")
 
     private var notificationItems: [NSMenuItem] = []
     private let maxInlineNotificationItems = 6
@@ -11462,7 +11462,7 @@ final class MenuBarExtraController: NSObject, NSMenuDelegate {
             button.imagePosition = .imageOnly
             button.imageScaling = .scaleProportionallyDown
             button.image = MenuBarIconRenderer.makeImage(unreadCount: 0)
-            button.toolTip = "cmux"
+            button.toolTip = "AMUX"
         }
 
         notificationsCancellable = notificationStore.$notifications
@@ -12018,28 +12018,23 @@ enum MenuBarIconRenderer {
     }
 
     private static func drawGlyph(in rect: NSRect) {
-        // Match the canonical cmux center-mark path from Icon Center Image Artwork.svg.
-        let srcMinX: CGFloat = 384.0
-        let srcMinY: CGFloat = 255.0
-        let srcWidth: CGFloat = 369.0
-        let srcHeight: CGFloat = 513.0
-
-        func map(_ x: CGFloat, _ y: CGFloat) -> NSPoint {
-            let nx = (x - srcMinX) / srcWidth
-            let ny = (y - srcMinY) / srcHeight
-            return NSPoint(
-                x: rect.minX + nx * rect.width,
-                y: rect.minY + (1.0 - ny) * rect.height
-            )
-        }
-
+        // AMUX upward chevron "A" — rotated 90° from cmux's right chevron.
+        // Draws an upward-pointing chevron centered in the rect.
         let path = NSBezierPath()
-        path.move(to: map(384.0, 255.0))
-        path.line(to: map(753.0, 511.5))
-        path.line(to: map(384.0, 768.0))
-        path.line(to: map(384.0, 654.0))
-        path.line(to: map(582.692, 511.5))
-        path.line(to: map(384.0, 369.0))
+        let cx = rect.midX
+        let top = rect.maxY - 1.0
+        let bottom = rect.minY + 2.0
+        let halfW = rect.width * 0.48
+        let innerH = rect.height * 0.22
+
+        // Outer chevron
+        path.move(to: NSPoint(x: cx - halfW, y: bottom))
+        path.line(to: NSPoint(x: cx, y: top))
+        path.line(to: NSPoint(x: cx + halfW, y: bottom))
+        // Inner notch
+        path.line(to: NSPoint(x: cx + halfW, y: bottom + innerH))
+        path.line(to: NSPoint(x: cx, y: top - innerH))
+        path.line(to: NSPoint(x: cx - halfW, y: bottom + innerH))
         path.close()
 
         NSColor.black.setFill()
