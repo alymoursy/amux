@@ -52,7 +52,7 @@ amux (Arabic MUX) هو نسخة معدّلة من [cmux](https://github.com/mana
 > xattr -cr /Applications/amux.app
 > open /Applications/amux.app
 > ```
-> سيتم حل هذا بمجرد توثيق التطبيق.
+> سنوثق التطبيق هذا الأسبوع — لن تحتاج لهذه الخطوة قريباً.
 
 ### البناء من المصدر
 

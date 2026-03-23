@@ -50,7 +50,7 @@ Download the latest `.dmg` from [Releases](https://github.com/alymoursy/amux/rel
 > xattr -cr /Applications/amux.app
 > open /Applications/amux.app
 > ```
-> This will be resolved once the app is notarized.
+> We're notarizing the app this week — this step won't be needed soon.
 
 ### Build from source
 
