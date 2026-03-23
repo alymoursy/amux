@@ -11431,7 +11431,7 @@ final class MenuBarExtraController: NSObject, NSMenuDelegate {
     private let clearAllItem = NSMenuItem(title: String(localized: "statusMenu.clearAll", defaultValue: "Clear All"), action: nil, keyEquivalent: "")
     private let checkForUpdatesItem = NSMenuItem(title: String(localized: "menu.checkForUpdates", defaultValue: "Check for Updates…"), action: nil, keyEquivalent: "")
     private let preferencesItem = NSMenuItem(title: String(localized: "menu.preferences", defaultValue: "Preferences…"), action: nil, keyEquivalent: "")
-    private let quitItem = NSMenuItem(title: String(localized: "menu.quitCmux", defaultValue: "Quit AMUX"), action: nil, keyEquivalent: "")
+    private let quitItem = NSMenuItem(title: String(localized: "menu.quitCmux", defaultValue: "Quit amux"), action: nil, keyEquivalent: "")
 
     private var notificationItems: [NSMenuItem] = []
     private let maxInlineNotificationItems = 6
@@ -11462,7 +11462,7 @@ final class MenuBarExtraController: NSObject, NSMenuDelegate {
             button.imagePosition = .imageOnly
             button.imageScaling = .scaleProportionallyDown
             button.image = MenuBarIconRenderer.makeImage(unreadCount: 0)
-            button.toolTip = "AMUX"
+            button.toolTip = "amux"
         }
 
         notificationsCancellable = notificationStore.$notifications

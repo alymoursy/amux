@@ -936,7 +936,7 @@
 					Carbon,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.amuxterm.app.debug;
-				PRODUCT_NAME = "AMUX DEV";
+				PRODUCT_NAME = "amux DEV";
 				SPARKLE_PUBLIC_KEY = "avjcgKibf1FTvhIjLBxhd+0HSpsXU4D0IGlVk8cgqRc=";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "cmux-Bridging-Header.h";
@@ -976,7 +976,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.amuxterm.app;
-				PRODUCT_NAME = AMUX;
+				PRODUCT_NAME = amux;
 				SPARKLE_PUBLIC_KEY = "avjcgKibf1FTvhIjLBxhd+0HSpsXU4D0IGlVk8cgqRc=";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "cmux-Bridging-Header.h";
@@ -1070,7 +1070,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AMUX DEV.app/Contents/MacOS/AMUX DEV";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/amux DEV.app/Contents/MacOS/amux DEV";
 				TEST_TARGET_NAME = GhosttyTabs;
 			};
 			name = Debug;
@@ -1088,7 +1088,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.amuxterm.apptests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AMUX.app/Contents/MacOS/AMUX";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/amux.app/Contents/MacOS/amux";
 				TEST_TARGET_NAME = GhosttyTabs;
 			};
 			name = Release;

@@ -370,7 +370,7 @@ struct cmuxApp: App {
             }
 
             CommandGroup(replacing: .appInfo) {
-                Button(String(localized: "menu.app.about", defaultValue: "About AMUX")) {
+                Button(String(localized: "menu.app.about", defaultValue: "About amux")) {
                     showAboutPanel()
                 }
                 Button(String(localized: "menu.app.ghosttySettings", defaultValue: "Ghostty Settings…")) {
@@ -1303,7 +1303,7 @@ private enum SettingsAboutWindowKind: String, CaseIterable, Identifiable {
         case .settings:
             return "Settings"
         case .about:
-            return "About AMUX"
+            return "About amux"
         }
     }
 
@@ -1416,7 +1416,7 @@ private struct SettingsAboutTitlebarDebugOptions: Equatable {
         case .about:
             return SettingsAboutTitlebarDebugOptions(
                 overridesEnabled: false,
-                windowTitle: "About AMUX",
+                windowTitle: "About amux",
                 titleVisibility: .hidden,
                 titlebarAppearsTransparent: true,
                 movableByWindowBackground: false,
@@ -2813,7 +2813,7 @@ private struct AboutPanelView: View {
 
             VStack(alignment: .center, spacing: 32) {
                 VStack(alignment: .center, spacing: 8) {
-                    Text(String(localized: "about.appName", defaultValue: "AMUX"))
+                    Text(String(localized: "about.appName", defaultValue: "amux"))
                         .bold()
                         .font(.title)
                     Text(String(localized: "about.description", defaultValue: "A Ghostty-based terminal with vertical tabs\nand a notification panel for macOS."))
@@ -3928,12 +3928,12 @@ struct SettingsView: View {
         if paneFirstClickFocusEnabled {
             return String(
                 localized: "settings.app.paneFirstClickFocus.subtitleOn",
-                defaultValue: "When AMUX is inactive, clicking a pane activates the window and focuses that pane in one click."
+                defaultValue: "When amux is inactive, clicking a pane activates the window and focuses that pane in one click."
             )
         }
         return String(
             localized: "settings.app.paneFirstClickFocus.subtitleOff",
-            defaultValue: "When AMUX is inactive, the first click only activates the window. Click again to focus the pane."
+            defaultValue: "When amux is inactive, the first click only activates the window. Click again to focus the pane."
         )
     }
 
@@ -4320,7 +4320,7 @@ struct SettingsView: View {
                         SettingsCardRow(
                             String(localized: "settings.app.language", defaultValue: "Language"),
                             subtitle: appLanguage != LanguageSettings.languageAtLaunch.rawValue
-                                ? String(localized: "settings.app.language.restartSubtitle", defaultValue: "Restart AMUX to apply")
+                                ? String(localized: "settings.app.language.restartSubtitle", defaultValue: "Restart amux to apply")
                                 : nil,
                             controlWidth: pickerColumnWidth
                         ) {
@@ -4444,7 +4444,7 @@ struct SettingsView: View {
 
                         SettingsCardRow(
                             String(localized: "settings.app.showInMenuBar", defaultValue: "Show in Menu Bar"),
-                            subtitle: String(localized: "settings.app.showInMenuBar.subtitle", defaultValue: "Keep AMUX in the menu bar for unread notifications and quick actions.")
+                            subtitle: String(localized: "settings.app.showInMenuBar.subtitle", defaultValue: "Keep amux in the menu bar for unread notifications and quick actions.")
                         ) {
                             Toggle("", isOn: $showMenuBarExtra)
                                 .labelsHidden()
@@ -4472,7 +4472,7 @@ struct SettingsView: View {
 
                         SettingsCardRow(
                             String(localized: "settings.notifications.paneFlash.title", defaultValue: "Pane Flash"),
-                            subtitle: String(localized: "settings.notifications.paneFlash.subtitle", defaultValue: "Briefly flash a blue outline when AMUX highlights a pane.")
+                            subtitle: String(localized: "settings.notifications.paneFlash.subtitle", defaultValue: "Briefly flash a blue outline when amux highlights a pane.")
                         ) {
                             Toggle("", isOn: $notificationPaneFlashEnabled)
                                 .labelsHidden()
@@ -4591,7 +4591,7 @@ struct SettingsView: View {
                             String(localized: "settings.app.telemetry", defaultValue: "Send anonymous telemetry"),
                             subtitle: sendAnonymousTelemetry != telemetryValueAtLaunch
                                 ? String(localized: "settings.app.telemetry.subtitleChanged", defaultValue: "Change takes effect on next launch.")
-                                : String(localized: "settings.app.telemetry.subtitle", defaultValue: "Share anonymized crash and usage data to help improve AMUX.")
+                                : String(localized: "settings.app.telemetry.subtitle", defaultValue: "Share anonymized crash and usage data to help improve amux.")
                         ) {
                             Toggle("", isOn: $sendAnonymousTelemetry)
                                 .labelsHidden()
@@ -4708,9 +4708,9 @@ struct SettingsView: View {
                         SettingsCardDivider()
 
                         SettingsCardRow(
-                            String(localized: "settings.app.openSidebarPRLinks", defaultValue: "Open Sidebar PR Links in AMUX Browser"),
+                            String(localized: "settings.app.openSidebarPRLinks", defaultValue: "Open Sidebar PR Links in amux Browser"),
                             subtitle: openSidebarPullRequestLinksInCmuxBrowser
-                                ? String(localized: "settings.app.openSidebarPRLinks.subtitleOn", defaultValue: "Clicks open inside AMUX browser.")
+                                ? String(localized: "settings.app.openSidebarPRLinks.subtitleOn", defaultValue: "Clicks open inside amux browser.")
                                 : String(localized: "settings.app.openSidebarPRLinks.subtitleOff", defaultValue: "Clicks open in your default browser.")
                         ) {
                             Toggle("", isOn: $openSidebarPullRequestLinksInCmuxBrowser)
@@ -5012,7 +5012,7 @@ struct SettingsView: View {
                             String(localized: "settings.automation.claudeCode", defaultValue: "Claude Code Integration"),
                             subtitle: claudeCodeHooksEnabled
                                 ? String(localized: "settings.automation.claudeCode.subtitleOn", defaultValue: "Sidebar shows Claude session status and notifications.")
-                                : String(localized: "settings.automation.claudeCode.subtitleOff", defaultValue: "Claude Code runs without AMUX integration.")
+                                : String(localized: "settings.automation.claudeCode.subtitleOff", defaultValue: "Claude Code runs without amux integration.")
                         ) {
                             Toggle("", isOn: $claudeCodeHooksEnabled)
                                 .labelsHidden()
@@ -5022,7 +5022,7 @@ struct SettingsView: View {
 
                         SettingsCardDivider()
 
-                        SettingsCardNote(String(localized: "settings.automation.claudeCode.note", defaultValue: "When enabled, AMUX wraps the claude command to inject session tracking and notification hooks. Disable if you prefer to manage Claude Code hooks yourself."))
+                        SettingsCardNote(String(localized: "settings.automation.claudeCode.note", defaultValue: "When enabled, amux wraps the claude command to inject session tracking and notification hooks. Disable if you prefer to manage Claude Code hooks yourself."))
                     }
 
                     SettingsCard {
@@ -5086,7 +5086,7 @@ struct SettingsView: View {
                         SettingsCardDivider()
 
                         SettingsCardRow(
-                            String(localized: "settings.browser.openTerminalLinks", defaultValue: "Open Terminal Links in AMUX Browser"),
+                            String(localized: "settings.browser.openTerminalLinks", defaultValue: "Open Terminal Links in amux Browser"),
                             subtitle: String(localized: "settings.browser.openTerminalLinks.subtitle", defaultValue: "When off, links clicked in terminal output open in your default browser.")
                         ) {
                             Toggle("", isOn: $openTerminalLinksInCmuxBrowser)
@@ -5111,7 +5111,7 @@ struct SettingsView: View {
                             VStack(alignment: .leading, spacing: 6) {
                                 SettingsCardRow(
                                     String(localized: "settings.browser.hostWhitelist", defaultValue: "Hosts to Open in Embedded Browser"),
-                                    subtitle: String(localized: "settings.browser.hostWhitelist.subtitle", defaultValue: "Applies to terminal link clicks and intercepted `open https://...` calls. Only these hosts open in AMUX. Others open in your default browser. One host or wildcard per line (for example: example.com, *.internal.example). Leave empty to open all hosts in AMUX.")
+                                    subtitle: String(localized: "settings.browser.hostWhitelist.subtitle", defaultValue: "Applies to terminal link clicks and intercepted `open https://...` calls. Only these hosts open in amux. Others open in your default browser. One host or wildcard per line (for example: example.com, *.internal.example). Leave empty to open all hosts in amux.")
                                 ) {
                                     EmptyView()
                                 }
@@ -5163,7 +5163,7 @@ struct SettingsView: View {
                             Text(String(localized: "settings.browser.httpAllowlist", defaultValue: "HTTP Hosts Allowed in Embedded Browser"))
                                 .font(.system(size: 13, weight: .semibold))
 
-                            Text(String(localized: "settings.browser.httpAllowlist.description", defaultValue: "Controls which HTTP (non-HTTPS) hosts can open in AMUX without a warning prompt. Defaults include localhost, 127.0.0.1, ::1, 0.0.0.0, and *.localtest.me."))
+                            Text(String(localized: "settings.browser.httpAllowlist.description", defaultValue: "Controls which HTTP (non-HTTPS) hosts can open in amux without a warning prompt. Defaults include localhost, 127.0.0.1, ::1, 0.0.0.0, and *.localtest.me."))
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
 

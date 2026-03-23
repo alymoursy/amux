@@ -41,9 +41,15 @@ Everything from cmux, plus:
 
 Download the latest `.dmg` from [Releases](https://github.com/alymoursy/amux/releases).
 
-> **macOS Gatekeeper:** The app isn't notarized yet (pending Apple Developer account approval). If macOS says it "can't be opened," right-click the app and choose **Open**, or run:
+> **macOS Gatekeeper:** The app isn't notarized yet (pending Apple Developer account approval). If macOS says it "can't be opened" or wants to move it to trash:
+> 1. Go to **System Settings > Privacy & Security**
+> 2. Scroll down — you'll see a message about amux being blocked
+> 3. Click **Open Anyway**
+>
+> Or from Terminal:
 > ```
-> xattr -cr /Applications/AMUX.app
+> xattr -cr /Applications/amux.app
+> open /Applications/amux.app
 > ```
 > This will be resolved once the app is notarized.
 
