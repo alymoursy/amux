@@ -41,6 +41,12 @@ Everything from cmux, plus:
 
 Download the latest `.dmg` from [Releases](https://github.com/alymoursy/amux/releases).
 
+> **macOS Gatekeeper:** The app isn't notarized yet (pending Apple Developer account approval). If macOS says it "can't be opened," right-click the app and choose **Open**, or run:
+> ```
+> xattr -cr /Applications/AMUX.app
+> ```
+> This will be resolved once the app is notarized.
+
 ### Build from source
 
 Requirements: macOS, Zig 0.15.2+, Xcode
