@@ -29,10 +29,9 @@ Built by the [Artificial Intelligence Company of Cairo](https://artificialintell
 Everything from cmux, plus:
 
 - **Arabic text shaping** — letters connect with correct contextual forms (initial, medial, final, isolated)
-- **Bidirectional rendering** — Arabic/Hebrew text displays in the correct right-to-left visual order using the Unicode Bidirectional Algorithm (UAX #9)
+- **Bidirectional rendering** — Arabic text displays in the correct right-to-left visual order using the Unicode Bidirectional Algorithm (UAX #9)
 - **Tashkeel support** — diacritical marks (fatha, kasra, damma, shadda, etc.) position correctly
 - **Mixed text** — Arabic and English on the same line render correctly
-- **Hebrew support** — RTL rendering works for Hebrew text too
 - **All cmux features** — vertical tabs, split panes, AI agent notifications, embedded browser, Ghostty config compatibility
 
 ## Installation
