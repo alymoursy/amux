@@ -2,12 +2,6 @@
 <h3 align="center">A GPU-accelerated terminal with Arabic rendering</h3>
 
 <p align="center">
-  <a href="https://github.com/alymoursy/amux/releases/latest/download/AMUX-macos.dmg">
-    <img src="./docs/assets/macos-badge.png" alt="Download amux for macOS" width="180" />
-  </a>
-</p>
-
-<p align="center">
   <a href="README.ar.md">العربية</a> | English
 </p>
 

@@ -2,12 +2,6 @@
 <h3 align="center" dir="rtl">محطة طرفية بتسريع GPU تدعم العربية</h3>
 
 <p align="center">
-  <a href="https://github.com/alymoursy/amux/releases/latest/download/amux-macos.dmg">
-    <img src="./docs/assets/macos-badge.png" alt="تحميل amux لنظام macOS" width="180" />
-  </a>
-</p>
-
-<p align="center">
   العربية | <a href="README.md">English</a>
 </p>
 
