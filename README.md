@@ -16,8 +16,6 @@
 
 amux (Arabic MUX) is a fork of [cmux](https://github.com/manaflow-ai/cmux) that adds proper Arabic and RTL text rendering to the terminal. Arabic text currently renders as disconnected, reversed glyphs in every GPU-accelerated terminal — Ghostty, cmux, Kitty, Alacritty. amux fixes this.
 
-Built by the [Artificial Intelligence Company of Cairo](https://artificialintelligencecc.com). Building AI for Arab realities. If AI coding agents run in terminals, and terminals can't render Arabic, then 400+ million Arabic speakers are excluded from the AI coding revolution.
-
 ## Features
 
 Everything from cmux, plus:
