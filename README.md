@@ -126,7 +126,3 @@ Third-party licenses are listed in [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSE
 Contributions are welcome. If you're working on Arabic terminal rendering, RTL improvements, or have feedback from using amux with Arabic text, please open an issue or PR.
 
 ---
-
-<p align="center">
-  Built by the <a href="https://artificialintelligencecc.com">Artificial Intelligence Company of Cairo</a> — building AI for Arab realities.
-</p>
